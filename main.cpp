@@ -15,7 +15,9 @@ int main() {
         switch (option) {
             case 1:
                 do {
-                    cout << "\nSafaricom\n" << endl;
+                    cout<<"\n=========================="<<endl;
+                    cout << "Safaricom" << endl;
+                    cout<<"=========================="<<endl;
                     cout << "1. My account" << endl;
                     cout << "2. M-Bank services" << endl;
                     cout << "0. Back to main menu" << endl;
@@ -24,7 +26,9 @@ int main() {
                     switch (option) {
                         case 1:
                             do {
-                                cout << "\nSafaricom - My account\n" << endl;
+                                cout<<"\n=========================="<<endl;
+                                cout << "Safaricom - My account" << endl;
+                                cout<<"=========================="<<endl;
                                 cout << "1. Balance enquiry" << endl;
                                 cout << "2. Top-up" << endl;
                                 cout << "3. Selfcare" << endl;
@@ -35,7 +39,9 @@ int main() {
                                 switch (option) {
                                     case 1:
                                         do{
-                                            cout<<"\nBalance enquiry\n"<<endl;
+                                            cout<<"\n=========================="<<endl;
+                                            cout<<"Balance enquiry"<<endl;
+                                            cout<<"=========================="<<endl;
                                             cout << "1. Prepaid" << endl;
                                             cout << "2. postpaid" << endl;
                                             cout << "0. Back to main menu" << endl;
@@ -44,17 +50,17 @@ int main() {
                                             switch (option) {
                                                 case 1:
                                                 //prepaid function
-                                                cout<<"prepaid selected." << endl;
+                                                cout<<"\nprepaid selected.\n" << endl;
                                                 break;
                                                 case 2:
                                                 //postpaid function
-                                                cout<<"postpaid selected" << endl;
+                                                cout<<"\nPostpaid selected\n" << endl;
                                                 break;
                                                 case 0:
                                                 //exit the program
                                                 continue;
                                                 default:
-                                                cout<<"Invalid option entered"<<endl;
+                                                cout<<"\nInvalid option entered\n"<<endl;
                                                 break;
 
 
@@ -90,6 +96,9 @@ int main() {
                                         break;
                                     case 3:
                                         do{
+                                            cout<<"\n=========================="<<endl;
+                                            cout<<"Selfcare"<<endl;
+                                            cout<<"=========================="<<endl;
                                             cout << "1. Prepaid" << endl;
                                             cout << "2. Postpaid" << endl;
                                             cout << "3. M_PESA" << endl;
@@ -99,21 +108,21 @@ int main() {
                                             switch (option) {
                                                 case 1:
                                                 //prepaid function function
-                                                cout<<"prepaid  selected." << endl;
+                                                cout<<"\nprepaid  selected.\n" << endl;
                                                 break;
                                                 case 2:
                                                 //postpaid  function
-                                                cout<<"postpaid selected" << endl;
+                                                cout<<"\npostpaid selected\n" << endl;
                                                 break;
                                                 case 3:
                                                 //M-PESA selected
-                                                cout<<"M-PESA selected" << endl;
+                                                cout<<"\nM-PESA selected\n" << endl;
                                                 break;
                                                 case 0:
                                                 //exit the program
                                                 continue;
                                                 default:
-                                                cout<<"Invalid option entered"<<endl;
+                                                cout<<"\nInvalid option entered\n"<<endl;
                                                 break;
 
 
@@ -122,6 +131,9 @@ int main() {
                                         break;
                                     case 4:
                                         do{
+                                            cout<<"\n=========================="<<endl;
+                                            cout<<"Customer Care"<<endl;
+                                            cout<<"=========================="<<endl;
                                             cout << "1. Prepaid" << endl;
                                             cout << "2. Postpaid" << endl;
                                             cout << "3. M_PESA" << endl;
@@ -131,21 +143,21 @@ int main() {
                                             switch (option) {
                                                 case 1:
                                                 //prepaid function function
-                                                cout<<"prepaid  selected." << endl;
+                                                cout<<"\nprepaid  selected.\n" << endl;
                                                 break;
                                                 case 2:
                                                 //postpaid  function
-                                                cout<<"postpaid selected" << endl;
+                                                cout<<"\npostpaid selected\n" << endl;
                                                 break;
                                                 case 3:
                                                 //M-PESA selected
-                                                cout<<"M-PESA selected" << endl;
+                                                cout<<"\nM-PESA selected\n" << endl;
                                                 break;
                                                 case 0:
                                                 //exit the program
                                                 continue;
                                                 default:
-                                                cout<<"Invalid option entered"<<endl;
+                                                cout<<"\nInvalid option entered\n"<<endl;
                                                 break;
 
 
@@ -156,12 +168,12 @@ int main() {
                                         // Go back to the main menu
                                         break;
                                     default:
-                                        cout << "Invalid option entered" << endl;
+                                        cout << "\nInvalid option entered\n" << endl;
                                 }
                             } while (option != 0);
                             break;
                         case 2:
-                            do{
+                            do{ 
                                             cout << "1. Backlays Bank" << endl;
                                             cout << "2. Co-op Bank" << endl;
                                             cout << "3. DTB" << endl;
