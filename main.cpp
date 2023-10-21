@@ -5,7 +5,7 @@ int main() {
     int option;
 
     do {
-        cout << "Sim Toolkit" << endl;
+        cout << "Sim Toolkit\n" << endl;
         cout << "1. Safaricom+" << endl;
         cout << "2. Mpesa" << endl;
         cout << "0. Exit" << endl;
@@ -15,7 +15,7 @@ int main() {
         switch (option) {
             case 1:
                 do {
-                    cout << "Safaricom" << endl;
+                    cout << "\nSafaricom\n" << endl;
                     cout << "1. My account" << endl;
                     cout << "2. M-Bank services" << endl;
                     cout << "0. Back to main menu" << endl;
@@ -24,7 +24,7 @@ int main() {
                     switch (option) {
                         case 1:
                             do {
-                                cout << "Safaricom - My account" << endl;
+                                cout << "\nSafaricom - My account\n" << endl;
                                 cout << "1. Balance enquiry" << endl;
                                 cout << "2. Top-up" << endl;
                                 cout << "3. Selfcare" << endl;
@@ -35,6 +35,7 @@ int main() {
                                 switch (option) {
                                     case 1:
                                         do{
+                                            cout<<"\nBalance enquiry\n"<<endl;
                                             cout << "1. Prepaid" << endl;
                                             cout << "2. postpaid" << endl;
                                             cout << "0. Back to main menu" << endl;
@@ -533,9 +534,235 @@ int main() {
                                         } while (option != 0 && option != 7);
                                         break;  // This break should be outside the innermost do-while loop
                                     case 2:
-                                        // KCB M-pesa function
-                                        cout << "Withdraw from ATM selected." << endl;
-                                        break;
+                                        do {
+                                                        cout << "KCB M-PESA" << endl;
+                                                        cout << "1. Deposit from M-PESA" << endl;
+                                                        cout << "2. WIthdraw to M-PESA" << endl;
+                                                        cout << "3. Loan at 8.64% for 30 days" <<endl;
+                                                        cout << "4. Fixed savings Accounts"<< endl;
+                                                        cout << "5. My Account" << endl;
+                                                        cout << "6. Back to Mpesa menu" << endl;
+                                                        cout << "0. Back to main menu" << endl;
+                                                        cout << "Enter an option: ";
+                                                        cin >> option;
+                                                        switch (option) {
+                                                            case 1:
+                                                                //deposit from mpesa function
+                                                                cout << "deposit from mpesa selected." << endl;
+                                                                break;
+                                                            case 2:
+                                                                //withdraw to mpesa function
+                                                                cout << "withdraw to mpesa selected." << endl;
+                                                                break;
+                                                            case 3:
+                                                                do {
+                                                                    cout << "Loan at 8.64% for 30 days" << endl;
+                                                                    cout << "1. Request loan" << endl;
+                                                                    cout << "2. Pay loan" << endl;
+                                                                    cout << "3. Check loan limit and fees" << endl;
+                                                                    cout << "4. Back to Mpesa menu" << endl;
+                                                                    cout << "0. Back to main menu" << endl;
+                                                                    cout << "Enter an option: ";
+                                                                    cin >> option;
+                                                                    switch (option) {
+                                                                        case 1:
+                                                                            //request loan  function
+                                                                            cout << "request loan selected." << endl;
+                                                                            break;
+                                                                        case 2:
+                                                                            //pay loan function function
+                                                                            cout << "pay loan selected." << endl;
+                                                                            break;
+                                                                        case 3:
+                                                                            //check loan limit and fees function
+                                                                            cout << "check loan limit and fees selected." << endl;
+                                                                            break;
+                                                                        case 4:
+                                                                            // Go back to the Mpesa menu
+                                                                            break;
+                                                                        case 0:
+                                                                            // Go back to the main menu
+                                                                            break;
+                                                                        default:
+                                                                            cout << "Invalid option entered" << endl;
+                                                                    }
+                                                                } while (option != 0 && option != 3);
+                                                                break;
+                                                            case 4:
+                                                                do {
+                                                                    cout << "Fixed savings account" << endl;
+                                                                    cout << "1. Fixed Deposit" << endl;
+                                                                    cout << "2. Target savings account" << endl;
+                                                                    cout << "0. Back to main menu" << endl;
+                                                                    cout << "Enter an option: ";
+                                                                    cin >> option;
+                                                                    switch (option) {
+                                                                        case 1:
+                                                                            do {
+                                                                                cout << "Fixed deposit" << endl;
+                                                                                cout << "1. Open Account" << endl;
+                                                                                cout << "2. Unlock Account" << endl;
+                                                                                cout << "0. Back to main menu" << endl;
+                                                                                cout << "Enter an option: ";
+                                                                                cin >> option;
+                                                                                switch (option) {
+                                                                                    case 1:
+                                                                                       do {
+                                                                                            cout << "Open account" << endl;
+                                                                                            cout << "1. From M-PESA" << endl;
+                                                                                            cout << "2. From KCB M-PESA" << endl;
+                                                                                            cout << "0. Back to main menu" << endl;
+                                                                                            cout << "Enter an option: ";
+                                                                                            cin >> option;
+                                                                                            switch (option) {
+                                                                                                case 1:
+                                                                                                    // from mpesa function
+                                                                                                    cout << "from mpesa selected." << endl;
+                                                                                                    break;
+                                                                                                case 2:
+                                                                                                    // from kcb mpesa function
+                                                                                                    cout << "from KCB-Mpesa selected." << endl;
+                                                                                                    break;
+                                                                                                case 0:
+                                                                                                    // exit the program
+                                                                                                    break;
+                                                                                                default:
+                                                                                                    cout << "Invalid option entered" << endl;
+                                                                                            }
+                                                                                        } while (option != 0);
+                                                                                        break;
+                                                                                    case 2:
+                                                                                        //unlock account function
+                                                                                        cout << "Unlock account selected." << endl;
+                                                                                        break;
+                                                                                    case 0:
+                                                                                        // exit the program
+                                                                                        break;
+                                                                                    default:
+                                                                                        cout << "Invalid option entered" << endl;
+                                                                                }
+                                                                            } while (option != 0);
+                                                                            break;
+                                                                        case 2:
+                                                                            do {
+                                                                                cout << "Taget savings account" << endl;
+                                                                                cout << "1. Open account" << endl;
+                                                                                cout << "2. Save" << endl;
+                                                                                cout << "3. Unlock account" << endl;
+                                                                                cout << "4. Back to Mpesa menu" << endl;
+                                                                                cout << "0. Back to main menu" << endl;
+                                                                                cout << "Enter an option: ";
+                                                                                cin >> option;
+                                                                                switch (option) {
+                                                                                    case 1:
+                                                                                        do {
+                                                                                            cout << "Open account" << endl;
+                                                                                            cout << "1. From M-PESA" << endl;
+                                                                                            cout << "2. From KCB M-PESA" << endl;
+                                                                                            cout << "0. Back to main menu" << endl;
+                                                                                            cout << "Enter an option: ";
+                                                                                            cin >> option;
+                                                                                            switch (option) {
+                                                                                                case 1:
+                                                                                                    // from mpesa function
+                                                                                                    cout << "from mpesa selected." << endl;
+                                                                                                    break;
+                                                                                                case 2:
+                                                                                                    // from kcb mpesa function
+                                                                                                    cout << "from KCB-Mpesa selected." << endl;
+                                                                                                    break;
+                                                                                                case 0:
+                                                                                                    // exit the program
+                                                                                                    break;
+                                                                                                default:
+                                                                                                    cout << "Invalid option entered" << endl;
+                                                                                            }
+                                                                                        } while (option != 0);
+                                                                                        break;
+                                                                                    case 2:
+                                                                                        do {
+                                                                                            cout << "Open account" << endl;
+                                                                                            cout << "1. From M-PESA" << endl;
+                                                                                            cout << "2. From KCB M-PESA" << endl;
+                                                                                            cout << "0. Back to main menu" << endl;
+                                                                                            cout << "Enter an option: ";
+                                                                                            cin >> option;
+                                                                                            switch (option) {
+                                                                                                case 1:
+                                                                                                    // from mpesa function
+                                                                                                    cout << "from mpesa selected." << endl;
+                                                                                                    break;
+                                                                                                case 2:
+                                                                                                    // from kcb mpesa function
+                                                                                                    cout << "from KCB-Mpesa selected." << endl;
+                                                                                                    break;
+                                                                                                case 0:
+                                                                                                    // exit the program
+                                                                                                    break;
+                                                                                                default:
+                                                                                                    cout << "Invalid option entered" << endl;
+                                                                                            }
+                                                                                        } while (option != 0);
+                                                                                        break;
+                                                                                    case 3:
+                                                                                        //unlock account function
+                                                                                        cout << "unlock account  selected." << endl;
+                                                                                        break;
+                                                                                    case 4:
+                                                                                        // Go back to the Mpesa menu
+                                                                                        break;
+                                                                                    case 0:
+                                                                                        // Go back to the main menu
+                                                                                        break;
+                                                                                    default:
+                                                                                        cout << "Invalid option entered" << endl;
+                                                                                }
+                                                                            } while (option != 0 && option != 3);
+                                                                            break;
+                                                                        case 0:
+                                                                            // exit the program
+                                                                            break;
+                                                                        default:
+                                                                            cout << "Invalid option entered" << endl;
+                                                                    }
+                                                                } while (option != 0);
+                                                                break;
+                                                            case 5:
+                                                                do {
+                                                                    cout << "My Account" << endl;
+                                                                    cout << "1. Check balance" << endl;
+                                                                    cout << "2. Mini statement" << endl;
+                                                                    cout << "0. Back to main menu" << endl;
+                                                                    cout << "Enter an option: ";
+                                                                    cin >> option;
+                                                                    switch (option) {
+                                                                        case 1:
+                                                                            // check balance function
+                                                                            cout << "check balance selected." << endl;
+                                                                            break;
+                                                                        case 2:
+                                                                            // mini statement function
+                                                                            cout << "mini statement selected." << endl;
+                                                                            break;
+                                                                        case 0:
+                                                                            // exit the program
+                                                                            break;
+                                                                        default:
+                                                                            cout << "Invalid option entered" << endl;
+                                                                    }
+                                                                } while (option != 0);
+                                                                break;
+                                                            case 6:
+                                                                // Go back to the Mpesa menu
+                                                                break;
+                                                            case 0:
+                                                                // Go back to the main menu
+                                                                break;
+                                                            default:
+                                                                cout << "Invalid option entered" << endl;
+                                                        }
+                                                    } while (option != 0 && option != 5);
+                                                    break;
                                     case 3:
                                         // Go back to the Mpesa menu
                                         break;
@@ -569,6 +796,7 @@ int main() {
                                     case 3:
                                         //pochi la biashara function
                                         cout<<"pochi la biashara selected" << endl;
+                                        break;
                                     case 0:
                                         // exit the program
                                         break;
@@ -592,23 +820,23 @@ int main() {
                                 cin >> option;
                                 switch (option) {
                                     case 1:
-                                        // mini statement
+                                        // mini statement function
                                         cout << "mini statement selected." << endl;
                                         break;
                                     case 2:
-                                        // check balance
+                                        // check balance function
                                         cout << "check balance selected." << endl;
                                         break;
                                     case 3:
-                                        // change mpesa pin
+                                        // change mpesa pin function
                                         cout << "change mpesa pin selected." << endl;
                                         break;
                                     case 4:
-                                        // change language
+                                        // change language function
                                         cout << "change language selected." << endl;
                                         break;
                                     case 5:
-                                        // update customer menu
+                                        // update customer menu function
                                         cout << "update customer menu selected." << endl;
                                         break;
                                     case 6:
