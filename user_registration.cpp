@@ -2,19 +2,33 @@
 #include <mysql_driver.h>
 #include <mysql_connection.h>
 #include <cppconn/prepared_statement.h>
-#include <limits> 
+#include <limits>
 
-// Function to insert user data into the database
-void insertUserData(sql::Connection *con, int idNo, const std::string &first_name, const std::string &last_name, int age, const std::string &phone, const std::string &address) {
+class User {
+public:
+    int idNo;
+    std::string firstName;
+    std::string lastName;
+    int age;
+    int pin;
+    std::string phone;
+    std::string address;
+
+    User(int id, const std::string &first, const std::string &last, int a, const std::string &p, const std::string &addr, int _pin)
+        : idNo(id), firstName(first), lastName(last), age(a), phone(p), address(addr), pin(_pin) {}
+};
+
+void insertUserData(sql::Connection *con, const User &user) {
     try {
         sql::PreparedStatement *prep_stmt;
-        prep_stmt = con->prepareStatement("INSERT INTO personalinfo (idNo, first_name, last_name, age, phone, address) VALUES (?, ?, ?, ?, ?, ?)");
-        prep_stmt->setInt(1, idNo);
-        prep_stmt->setString(2, first_name);
-        prep_stmt->setString(3, last_name);
-        prep_stmt->setInt(4, age);
-        prep_stmt->setString(5, phone);
-        prep_stmt->setString(6, address);
+        prep_stmt = con->prepareStatement("INSERT INTO personalinfo (idNo, first_name, last_name, age, phone, address, pin) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        prep_stmt->setInt(1, user.idNo);
+        prep_stmt->setString(2, user.firstName);
+        prep_stmt->setString(3, user.lastName);
+        prep_stmt->setInt(4, user.age);
+        prep_stmt->setString(5, user.phone);
+        prep_stmt->setString(6, user.address);
+        prep_stmt->setInt(7, user.pin);
         prep_stmt->execute();
         delete prep_stmt;
     } catch (sql::SQLException &e) {
@@ -22,50 +36,53 @@ void insertUserData(sql::Connection *con, int idNo, const std::string &first_nam
     }
 }
 
+User captureUserInput() {
+  int idNo;
+  int age;
+  int pin;
+  std::string phone;
+  std::string address;
 
-int main() {
-    int idNo;
-    int age;
-    std::string phone;
-    std::string first_name;
-    std::string last_name;
-    std::string address;
-   
+  std::string first_name;
+  std::string last_name;
 
-    std::cout << "\n=====================\n";
-    std::cout << "USER REGISTRATION\n";
-    std::cout << "=====================\n";
+  std::cout << "=================================" << std::endl;
+  std::cout << "NEW USER REGISTRATION" << std::endl;
+  std::cout << "=================================" << std::endl;
+  std::cout << "Enter id: ";
+  std::cin >> idNo;
+  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-    std::cout << "Enter id: ";
-    std::cin >> idNo;
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Consume the newline character
+  std::cout << "Enter first name: ";
+  std::getline(std::cin, first_name);
 
-    std::cout << "Enter first name: ";
-    std::getline(std::cin, first_name);
+  std::cout << "Enter last name: ";
+  std::getline(std::cin, last_name);
 
-    std::cout << "Enter last name: ";
-    std::getline(std::cin, last_name);
+  std::cout << "Enter age: ";
+  std::cin >> age;
+  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Consume the newline character
 
-    std::cout << "Enter age: ";
-    std::cin >> age;
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+  std::cout << "Enter phone number: ";
+  std::getline(std::cin, phone);
 
-    std::cout << "Enter phone: ";
-    while (!(std::cin >> phone)) {
-        std::cin.clear();  
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-        std::cout << "Invalid input. Please enter a valid integer for phone: ";
-    }
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+  std::cout << "Enter Address: ";
+  std::getline(std::cin, address);
 
-    std::cout << "Enter Address: ";
-    std::getline(std::cin, address);
+  std::cout << "Enter new PIN: ";
+  std::cin >> pin;
 
-    std::cout<<"\nDetails captured successfully!" <<std::endl;
-    std::cout <<"Closing registration form..."<<std::endl;
+  std::cout << "\nYour details have been recorded successfully!" << std::endl;
+  std::cout << "Exiting registration window..." << std::endl;
+
+  return User(idNo, first_name, last_name, age, phone, address, pin);
+}
 
 
 
+
+void registerNewUser() {
+    User newUser = captureUserInput();
 
     sql::mysql::MySQL_Driver *driver;
     sql::Connection *con;
@@ -73,6 +90,7 @@ int main() {
     std::string hostname = "localhost";
     std::string username = "mike";
     std::string password = "mikemike";
+
     std::string database = "safaricom";
 
     try {
@@ -80,13 +98,12 @@ int main() {
         con = driver->connect("tcp://" + hostname + ":3306", username, password);
         con->setSchema(database);
 
-        // Call the insertUserData function to insert data
-        insertUserData(con, idNo, first_name, last_name, age , phone, address );
+        insertUserData(con, newUser);
 
         delete con;
     } catch (sql::SQLException &e) {
         std::cerr << "SQL Exception: " << e.what() << std::endl;
     }
-
-    return 0;
 }
+
+

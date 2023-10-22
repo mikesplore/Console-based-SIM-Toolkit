@@ -20,7 +20,7 @@ int main() {
                     cout<<"=========================="<<endl;
                     cout << "1. My account" << endl;
                     cout << "2. M-Bank services" << endl;
-                    cout << "0. Back to main menu" << endl;
+                    cout << "0. Exit the program" << endl;
                     cout << "Enter an option: ";
                     cin >> option;
                     switch (option) {
@@ -33,7 +33,7 @@ int main() {
                                 cout << "2. Top-up" << endl;
                                 cout << "3. Selfcare" << endl;
                                 cout << "4. Customer care" << endl;
-                                cout << "0. Back to main menu" << endl;
+                                cout << "0. Exit the program" << endl;
                                 cout << "Enter an option: ";
                                 cin >> option;
                                 switch (option) {
@@ -44,7 +44,7 @@ int main() {
                                             cout<<"=========================="<<endl;
                                             cout << "1. Prepaid" << endl;
                                             cout << "2. postpaid" << endl;
-                                            cout << "0. Back to main menu" << endl;
+                                            cout << "0. Exit the program" << endl;
                                             cout<<"Enter an option:  " ;
                                             cin>>option;
                                             switch (option) {
@@ -71,7 +71,7 @@ int main() {
                                         do{
                                             cout << "1. My number" << endl;
                                             cout << "2. Another Safaricom number" << endl;
-                                            cout << "0. Back to main menu" << endl;
+                                            cout << "0. Exit the program" << endl;
                                             cout<<"Enter an option:  " ;
                                             cin>>option;
                                             switch (option) {
@@ -102,7 +102,7 @@ int main() {
                                             cout << "1. Prepaid" << endl;
                                             cout << "2. Postpaid" << endl;
                                             cout << "3. M_PESA" << endl;
-                                            cout << "0. Back to main menu" << endl;
+                                            cout << "0. Exit the program" << endl;
                                             cout<<"Enter an option:  " ;
                                             cin>>option;
                                             switch (option) {
@@ -137,7 +137,7 @@ int main() {
                                             cout << "1. Prepaid" << endl;
                                             cout << "2. Postpaid" << endl;
                                             cout << "3. M_PESA" << endl;
-                                            cout << "0. Back to main menu" << endl;
+                                            cout << "0. Exit the program" << endl;
                                             cout<<"Enter an option:  " ;
                                             cin>>option;
                                             switch (option) {
@@ -192,7 +192,7 @@ int main() {
                                             cout << "16. SMB Bank" << endl;
                                             cout << "17. Sidian Bank" << endl;
                                             cout << "18. Standered Chartered" << endl;
-                                            cout << "0. Back to main menu" << endl;
+                                            cout << "0. Exit the program" << endl;
                                             cout<<"Enter an option:  " ;
                                             cin>>option;
                                             switch (option) {
@@ -298,7 +298,7 @@ int main() {
                     cout << "4. Loans and Savings" << endl;
                     cout << "5. Lipa na Mpesa" << endl;
                     cout << "6. My account" << endl;
-                    cout << "0. Back to main menu" << endl;
+                    cout << "0. Exit the program" << endl;
                     cout << "Enter an option: ";
                     cin >> option;
                     switch (option) {
@@ -312,7 +312,7 @@ int main() {
                                 cout << "1. Withdraw from agent" << endl;
                                 cout << "2. Withdraw from ATM" << endl;
                                 cout << "3. Back to Mpesa menu" << endl;
-                                cout << "0. Back to main menu" << endl;
+                                cout << "0. Exit the program" << endl;
                                 cout << "Enter an option: ";
                                 cin >> option;
                                 switch (option) {
@@ -342,7 +342,7 @@ int main() {
                                 cout << "1. My Phone" << endl;
                                 cout << "2. Other Phone" << endl;
                                 cout << "3. Back to Mpesa menu" << endl;
-                                cout << "0. Back to main menu" << endl;
+                                cout << "0. Exit the program" << endl;
                                 cout << "Enter an option: ";
                                 cin >> option;
                                 switch (option) {
@@ -371,7 +371,7 @@ int main() {
                                 cout << "1. M-shwari" << endl;
                                 cout << "2. KCB M-PESA" << endl;
                                 cout << "3. Back to Mpesa menu" << endl;
-                                cout << "0. Back to main menu" << endl;
+                                cout << "0. Exit the program" << endl;
                                 cout << "Enter an option: ";
                                 cin >> option;
                                 switch (option) {
@@ -385,7 +385,7 @@ int main() {
                                             cout << "5. Check balance" << endl;
                                             cout << "6. Mini statement" << endl;
                                             cout << "7. Back to Mpesa menu" << endl;
-                                            cout << "0. Back to main menu" << endl;
+                                            cout << "0. Exit the program" << endl;
                                             cout << "Enter an option: ";
                                             cin >> option;
                                             switch (option) {
@@ -408,7 +408,7 @@ int main() {
                                             cout << "4. Check balance" << endl;
                                             cout << "5. Mini statement" << endl;
                                             cout << "6. Back to Mpesa menu" << endl;
-                                            cout << "0. Back to main menu" << endl;
+                                            cout << "0. Exit the program" << endl;
                                             cout << "Enter an option: ";
                                             cin >> option;
                                             switch (option) {
@@ -417,7 +417,7 @@ int main() {
                                                         cout << "Open account" << endl;
                                                         cout << "1. From M-PESA" << endl;
                                                         cout << "2. FROM M-Shwari" << endl;
-                                                        cout << "0. Back to main menu" << endl;
+                                                        cout << "0. Exit the program" << endl;
                                                         cout << "Enter an option: ";
                                                         cin >> option;
                                                         switch (option) {
@@ -442,7 +442,7 @@ int main() {
                                                         cout << "Save" << endl;
                                                         cout << "1. From M-PESA" << endl;
                                                         cout << "2. FROM M-Shwari" << endl;
-                                                        cout << "0. Back to main menu" << endl;
+                                                        cout << "0. Exit the program" << endl;
                                                         cout << "Enter an option: ";
                                                         cin >> option;
                                                         switch (option) {
@@ -495,7 +495,7 @@ int main() {
                                                         cout << "3. Check loan limit and fees";
                                                         cout << "4. Loan balance"<< endl;
                                                         cout << "5. Back to Mpesa menu" << endl;
-                                                        cout << "0. Back to main menu" << endl;
+                                                        cout << "0. Exit the program" << endl;
                                                         cout << "Enter an option: ";
                                                         cin >> option;
                                                         switch (option) {
@@ -554,7 +554,7 @@ int main() {
                                                         cout << "4. Fixed savings Accounts"<< endl;
                                                         cout << "5. My Account" << endl;
                                                         cout << "6. Back to Mpesa menu" << endl;
-                                                        cout << "0. Back to main menu" << endl;
+                                                        cout << "0. Exit the program" << endl;
                                                         cout << "Enter an option: ";
                                                         cin >> option;
                                                         switch (option) {
@@ -573,7 +573,7 @@ int main() {
                                                                     cout << "2. Pay loan" << endl;
                                                                     cout << "3. Check loan limit and fees" << endl;
                                                                     cout << "4. Back to Mpesa menu" << endl;
-                                                                    cout << "0. Back to main menu" << endl;
+                                                                    cout << "0. Exit the program" << endl;
                                                                     cout << "Enter an option: ";
                                                                     cin >> option;
                                                                     switch (option) {
@@ -605,7 +605,7 @@ int main() {
                                                                     cout << "Fixed savings account" << endl;
                                                                     cout << "1. Fixed Deposit" << endl;
                                                                     cout << "2. Target savings account" << endl;
-                                                                    cout << "0. Back to main menu" << endl;
+                                                                    cout << "0. Exit the program" << endl;
                                                                     cout << "Enter an option: ";
                                                                     cin >> option;
                                                                     switch (option) {
@@ -614,7 +614,7 @@ int main() {
                                                                                 cout << "Fixed deposit" << endl;
                                                                                 cout << "1. Open Account" << endl;
                                                                                 cout << "2. Unlock Account" << endl;
-                                                                                cout << "0. Back to main menu" << endl;
+                                                                                cout << "0. Exit the program" << endl;
                                                                                 cout << "Enter an option: ";
                                                                                 cin >> option;
                                                                                 switch (option) {
@@ -623,7 +623,7 @@ int main() {
                                                                                             cout << "Open account" << endl;
                                                                                             cout << "1. From M-PESA" << endl;
                                                                                             cout << "2. From KCB M-PESA" << endl;
-                                                                                            cout << "0. Back to main menu" << endl;
+                                                                                            cout << "0. Exit the program" << endl;
                                                                                             cout << "Enter an option: ";
                                                                                             cin >> option;
                                                                                             switch (option) {
@@ -662,7 +662,7 @@ int main() {
                                                                                 cout << "2. Save" << endl;
                                                                                 cout << "3. Unlock account" << endl;
                                                                                 cout << "4. Back to Mpesa menu" << endl;
-                                                                                cout << "0. Back to main menu" << endl;
+                                                                                cout << "0. Exit the program" << endl;
                                                                                 cout << "Enter an option: ";
                                                                                 cin >> option;
                                                                                 switch (option) {
@@ -671,7 +671,7 @@ int main() {
                                                                                             cout << "Open account" << endl;
                                                                                             cout << "1. From M-PESA" << endl;
                                                                                             cout << "2. From KCB M-PESA" << endl;
-                                                                                            cout << "0. Back to main menu" << endl;
+                                                                                            cout << "0. Exit the program" << endl;
                                                                                             cout << "Enter an option: ";
                                                                                             cin >> option;
                                                                                             switch (option) {
@@ -696,7 +696,7 @@ int main() {
                                                                                             cout << "Open account" << endl;
                                                                                             cout << "1. From M-PESA" << endl;
                                                                                             cout << "2. From KCB M-PESA" << endl;
-                                                                                            cout << "0. Back to main menu" << endl;
+                                                                                            cout << "0. Exit the program" << endl;
                                                                                             cout << "Enter an option: ";
                                                                                             cin >> option;
                                                                                             switch (option) {
@@ -744,7 +744,7 @@ int main() {
                                                                     cout << "My Account" << endl;
                                                                     cout << "1. Check balance" << endl;
                                                                     cout << "2. Mini statement" << endl;
-                                                                    cout << "0. Back to main menu" << endl;
+                                                                    cout << "0. Exit the program" << endl;
                                                                     cout << "Enter an option: ";
                                                                     cin >> option;
                                                                     switch (option) {
@@ -793,7 +793,7 @@ int main() {
                                 cout << "1. Pay Bills" << endl;
                                 cout << "2. Buy Goods and Services" << endl;
                                 cout << "3. Pochi la biashara" << endl;
-                                cout << "0. Back to main menu" << endl;
+                                cout << "0. Exit the program" << endl;
                                 cout << "Enter an option: ";
                                 cin >> option;
                                 switch (option) {
@@ -827,7 +827,7 @@ int main() {
                                 cout << "4. Change language" << endl;
                                 cout << "5. Update customer menu" << endl;
                                 cout << "6. Go back" << endl;
-                                cout << "0. Back to main menu" << endl;
+                                cout << "0. Exit the program" << endl;
                                 cout << "Enter an option: ";
                                 cin >> option;
                                 switch (option) {
